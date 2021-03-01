@@ -1,17 +1,13 @@
 import time
 import sys
 import os
+import mouse
 from termcolor import colored
 
-try:
-    import mouse
-except ImportError:
-    os.system('pip install mouse')
 
+def getMousePosition():
+    return mouse.get_position()
 
-
-def Mouse_MoveXY(x, y):
-    mouse.move(x, y)
 
 while True:
     print(mouse.get_position())
